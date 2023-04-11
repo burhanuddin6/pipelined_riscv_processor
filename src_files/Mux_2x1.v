@@ -27,11 +27,11 @@ module Mux_2x1(
 	output reg [63:0] data_out
 );
 
-//assign data_out = sel? b:a ;
+//assign data_out = sel_bit? b:a ;
 
-always @ (a, b, sel)
+always @ (a, b, sel_bit)
 begin
-	if (!sel)
+	if (!sel_bit)
 		data_out = a;
 	else
 		data_out = b;

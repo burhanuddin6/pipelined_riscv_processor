@@ -21,31 +21,31 @@
 
 
 module Imm_Data_Extractor(
-input [31:0] instruction, // the 32-bit instruction
-output reg [63:0] out // sign extended immediate output
+input [31:0] Instruction, // the 32-bit Instruction
+output reg [63:0] immediate // sign extended immediate 
     );
     
 //wire t1,t2; // toggle 1, toggle2
-//mux u1(0,1,instruction[5],toggle1); // t1 = instruction[5]
-//mux u2(0,1,instruction[6],toggle2); // t2 = instruction[6]
+//mux u1(0,1,Instruction[5],toggle1); // t1 = Instruction[5]
+//mux u2(0,1,Instruction[6],toggle2); // t2 = Instruction[6]
 
-always @(instruction[6:5]) // two bit case statement, with 4 possible configurations
+always @(Instruction[6:5]) // two bit case statement, with 4 possible configurations
 begin
-case(instruction[6:5])
+case(Instruction[6:5])
     2'b00: // I format
     begin
-        out = {{52{instruction[31]}},instruction[31:20]};
+        immediate = {{52{Instruction[31]}},Instruction[31:20]};
     end 
     2'b01: // S-format
     begin
-        out = {{52{instruction[31]}}, instruction[31:25], instruction[11:7]};
+        immediate = {{52{Instruction[31]}}, Instruction[31:25], Instruction[11:7]};
     end
     2'b11: // Sb-format
     begin
-        out = {{52{instruction[31]}}, instruction[31:25], instruction[11:7]};
+        immediate = {{52{Instruction[31]}}, Instruction[31:25], Instruction[11:7]};
     end
     default:
-        out = 0;
+        immediate = 0;
 endcase
 end
 endmodule

@@ -20,34 +20,34 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module registerFile(
+module Register_File(
 input clk,
 input reset,
-input [63:0] WriteData,
+input [63:0] Write_Data,
 input [4:0] rs1,
 input [4:0] rs2,
 input [4:0] rd,
 input RegWrite,
-output reg [63:0] ReadData1,
-output reg [63:0] ReadData2
+output reg [63:0] Read_Data_1,
+output reg [63:0] Read_Data_2
     );
 // declare an array of 64-bit registers, Register of size 32
-reg [63:0] Register[32:0];
+reg [63:0] REG_MEMORY[32:0];
 integer i;
 initial
 begin
     for(i = 0; i < 32; i = i + 1)
     begin
         // loading i in each reg i
-        Register[i] = i+1;
+        REG_MEMORY[i] = i+1;
     end
 end
 always @(posedge clk) // only at pos edge of clk
 begin
     if (RegWrite == 1)
     begin
-        // write the input data to destination register
-        Register[rd] = WriteData;
+        // write the input data to destination REG_MEMORY
+        REG_MEMORY[rd] = WriteData;
     end
 end
 
@@ -61,8 +61,8 @@ begin
     else
     begin
         // if reset is not 0, then
-        ReadData1 <= Register[rs1];
-        ReadData2 <= Register[rs2];
+        ReadData1 <= REG_MEMORY[rs1];
+        ReadData2 <= REG_MEMORY[rs2];
     end
 end
 
