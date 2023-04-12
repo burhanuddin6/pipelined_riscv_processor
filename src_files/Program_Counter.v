@@ -22,12 +22,12 @@
 
 module Program_Counter(
 input [63:0] PC_In, // the before counter
-input clk,
+input clock,
 input reset,
 output reg [63:0] PC_Out // the counter after checking reset
 );
 // always do when there is a posedge of the clock or reset
-always @(posedge clk or posedge reset)
+always @(posedge clock or posedge reset)
 begin
 // if reset, then restart the counter
 if (reset == 1)

@@ -21,7 +21,7 @@
 
 
 module Processor_Top(
-input clk, reset,
+input clock, reset,
 
 // program counter wires
 output [63:0] pc_in,
@@ -70,73 +70,87 @@ wire sig_RegWrite;
 wire [3:0]sig_operation;
 
 
-Program_Counter PC(.PC_In(pc_in), .clk(clk), .reset(reset), .PC_Out(pc_out));
+Program_Counter pc_module_1(.PC_In(pc_in), 
+        .clock(clock), 
+        .reset(reset), 
+        .PC_Out(pc_out));
 
-Adder Adder1(.a(pc_out), .b(4), .out(pc_mux_0));
+Adder Adder_1(.a(pc_out), 
+        .b(4), 
+        .out(pc_mux_0));
 
 // Branch instruction adder. immediate data is shifted left by 1.
-Adder Adder2(.a(pc_out), .b(immediate_data*2), .out(pc_mux_1));
+Adder Adder_2(.a(pc_out), 
+        .b(immediate_data*2), 
+        .out(pc_mux_1));
 
 Mux_2x1 Branch_Mux(.a(pc_mux_0),
-.b(pc_mux_1),
-.sel(0),
-.data_out(pc_in));
+        .b(pc_mux_1),
+        .sel_bit(sig_Branch & sig_zero),
+        .data_out(pc_in));
 
-Instruction_Memory u1(pc_out, instruction);
+Instruction_Memory IM_module_1(.Instruction_Address(pc_out),
+        .Instruction(instruction));
 
-Instruction_Parser_R u2(instruction, opcode, rd, funct3, rs1, rs2, funct7);
+Instruction_Parser IP_module_1(.instruction(instruction),
+        .opcode(opcode),
+        .rd(rd),
+        .funct3(funct3),
+        .rs1(rs1),
+        .rs2(rs2),
+        .funct7(funct7));
 
 
-Control_Unit u3(.Opcode(opcode),
-.Branch(sig_Branch), 
-.MemRead(sig_MemRead), 
-.MemtoReg(sig_MemToReg), 
-.MemWrite(sig_MemWrite), 
-.ALUSrc(sig_ALUSrc), 
-.RegWrite(sig_RegWrite), 
-.ALUOp(sig_ALUOp));
+Control_Unit CU_module_1(.opcode(opcode),
+        .Branch(sig_Branch), 
+        .MemRead(sig_MemRead), 
+        .MemtoReg(sig_MemToReg), 
+        .MemWrite(sig_MemWrite), 
+        .ALUSrc(sig_ALUSrc), 
+        .RegWrite(sig_RegWrite), 
+        .ALUOp(sig_ALUOp));
 
 // Immediate Data Extractor: Reads the sign-extended 64-bit Immediate value
-Imm_Data_Extractor u4(instruction, immediate_data);
+Imm_Data_Extractor IDE_module_1(.Instruction(instruction), // the 32-bit Instruction
+        .immediate(immediate_data));
 
-registerFile u5( .clk(clk),
-.reset(reset),
-.WriteData(write_data),
-.rs1(rs1),
-.rs2(rs2),
-.rd(rd),
-.RegWrite(sig_RegWrite),
-.ReadData1(read_data1),
-.ReadData2(read_data2));
+Register_File RF_module_1(.clock(clk),
+        .reset(reset),
+        .Write_Data(write_data),
+        .rs1(rs1),
+        .rs2(rs2),
+        .rd(rd),
+        .RegWrite(sig_RegWrite),
+        .Read_Data_1(read_data1),
+        .Read_Data_2(read_data2));
 
-ALU_Control u6(.ALUOp(sig_ALUOp),
-.Funct({instruction[30],instruction[14:12]}),
-.Operation(sig_operation));
+ALU_Control ALUC_module_1(.ALUOp(sig_ALUOp),
+        .Funct({instruction[30],instruction[14:12]}),
+        .Operation(sig_operation));
 
-Mux_2x1 ALU_MUX(.a(read_data2),
-.b(immediate_data),
-.sel(ALUSrc),
-.data_out(ALU_mux_O));
+Mux_2x1 ALU_Mux(.a(read_data2),
+        .b(immediate_data),
+        .sel_bit1(ALUSrc),
+        .data_out(ALU_mux_O));
 
-ALU_64_bit u7(.a(read_data1), 
-.b(ALU_mux_O),
-.ALUOp(sig_operation),
-.Result(ALU_Result),
-.ZERO(sig_zero));
+ALU_64_bit ALU_module_1(.a(read_data1), 
+        .b(ALU_mux_O),
+        .ALUOp(sig_operation),
+        .Result(ALU_Result),
+        .Zero(sig_zero));
 
 
+Data_Memory DM_module_1(.Memory_Address(ALU_Result), // 64 bit input specifiying memroy address
+        .Write_Data(read_data2), // 64 bit data input
+        .clock(clock), // clock
+        .MemWrite(sig_MemWrite), // MemWrite signal from the control unit that determines the write operation
+        .MemRead(sig_MemRead), // MemRead signal from the control unit that determines the read operation
+        .Read_Data(mem_read_data) ); // 64 bit output in case if data is read
 
-Data_Memory u8(.Mem_Addr(ALU_Result), // 64 bit input specifiying memroy address
-.Write_Data(read_data2), // 64 bit data input
-.clk(clk), // clock
-.MemWrite(sig_MemWrite), // MemWrite signal from the control unit that determines the write operation
-.MemRead(sig_MemRead), // MemRead signal from the control unit that determines the read operation
-.Read_Data(mem_read_data) ); // 64 bit output in case if data is read
-
-Mux_2x1 MEM_mux(.a(ALU_Result),
-.b(mem_read_data),
-.sel(sig_MemToReg),
-.data_out(write_data));
+Mux_2x1 MEM_Mux(.a(ALU_Result),
+        .b(mem_read_data),
+        .sel_bit(sig_MemToReg),
+        .data_out(write_data));
 
 
 endmodule

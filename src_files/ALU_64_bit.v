@@ -26,7 +26,7 @@ module ALU_64_bit
 	input [3:0] ALUOp,
 	
 	output reg [63:0] Result,
-	output reg ZERO
+	output reg Zero
 );
 
 localparam [3:0]
@@ -47,7 +47,7 @@ begin
 		
 		default: Result = 0;
 	endcase
-	ZERO = (Result == 0)? 1: 0;
+	Zero = (Result == 0)? 1: 0;
 end
 
 endmodule 

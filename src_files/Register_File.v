@@ -21,7 +21,7 @@
 
 
 module Register_File(
-input clk,
+input clock,
 input reset,
 input [63:0] Write_Data,
 input [4:0] rs1,
@@ -39,10 +39,10 @@ begin
     for(i = 0; i < 32; i = i + 1)
     begin
         // loading i in each reg i
-        REG_MEMORY[i] = i+1;
+        REG_MEMORY[i] = 0;
     end
 end
-always @(posedge clk) // only at pos edge of clk
+always @(posedge clock) // only at pos edge of clock
 begin
     if (RegWrite == 1)
     begin

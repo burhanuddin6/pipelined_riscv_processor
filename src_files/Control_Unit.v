@@ -21,14 +21,14 @@
 
 module Control_Unit
 (
-	input [6:0] Opcode,
+	input [6:0] opcode,
 	output reg Branch, MemRead, MemtoReg, MemWrite, ALUSrc, RegWrite, 
 	output reg [1:0] ALUOp
 );
 
-	always @ (Opcode)
+	always @ (opcode)
 	begin
-		case (Opcode)
+		case (opcode)
 			7'b0110011: //R type
 				begin
 					Branch = 0;
