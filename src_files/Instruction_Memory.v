@@ -24,33 +24,12 @@ module Instruction_Memory(
 input [63:0] Instruction_Address, // Input instruction memory
 output reg [31:0] Instruction); // Output 32-bit instruction
 
-reg [7:0] MEMORY [15:0]; // 16-bytes instruction memory
+reg [7:0] MEMORY [100:0]; // 16-bytes instruction memory
 integer i; // integer i used by for loop
 reg t;
 initial
 begin
-// Assigning arbitrary values for each instruction
-//for (i = 0; i < 64; i = i + 1)
-//begin
-//    MEMORY[i] = i; // assigning arbitrary values    
-//end
-MEMORY[0] = 8'b10000011;
-MEMORY[1] = 8'b00110100;
-MEMORY[2] = 8'b10000101;
-MEMORY[3] = 8'b00000010;
-MEMORY[4] = 8'b10110011;
-MEMORY[5] = 8'b10000100;
-MEMORY[6] = 8'b10011010;
-MEMORY[7] = 8'b00000000;
-MEMORY[8] = 8'b10011010;
-MEMORY[9] = 8'b10000100;
-MEMORY[10] = 8'b00010100;
-MEMORY[11] = 8'b00000000;
-MEMORY[12] = 8'b00100011;
-MEMORY[13] = 8'b00110100;
-MEMORY[14] = 8'b10010101;
-MEMORY[15] = 8'b00000010;
-
+$readmemb("instructions.mem", MEMORY);
 end
 // Always execute if the Instruction Address is changed
 always @(Instruction_Address)

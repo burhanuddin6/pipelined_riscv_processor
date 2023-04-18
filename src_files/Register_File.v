@@ -47,7 +47,7 @@ begin
     if (RegWrite == 1)
     begin
         // write the input data to destination REG_MEMORY
-        REG_MEMORY[rd] = WriteData;
+        REG_MEMORY[rd] = Write_Data;
     end
 end
 
@@ -55,14 +55,14 @@ always @(*) // at any change
 begin
     if (reset == 1)
     begin
-        ReadData1 <= 0;
-        ReadData2 <= 0;
+        Read_Data_1 <= 0;
+        Read_Data_2 <= 0;
     end
     else
     begin
         // if reset is not 0, then
-        ReadData1 <= REG_MEMORY[rs1];
-        ReadData2 <= REG_MEMORY[rs2];
+        Read_Data_1 <= REG_MEMORY[rs1];
+        Read_Data_2 <= REG_MEMORY[rs2];
     end
 end
 

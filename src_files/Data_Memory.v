@@ -44,14 +44,14 @@ begin
     if (MemRead == 1)
     begin
         // Reading 8-bytes of data
-        Read_Data[7:0] = DATA[Mem_Addr];
-        Read_Data[15:8] = DATA[Mem_Addr + 1];
-        Read_Data[23:16] = DATA[Mem_Addr + 2];
-        Read_Data[31:24] = DATA[Mem_Addr + 3];
-        Read_Data[39:32] = DATA[Mem_Addr + 4];
-        Read_Data[47:40] = DATA[Mem_Addr + 5];
-        Read_Data[55:48] = DATA[Mem_Addr + 6];
-        Read_Data[63:56] = DATA[Mem_Addr + 7];
+        Read_Data[7:0] = DATA[Memory_Address];
+        Read_Data[15:8] = DATA[Memory_Address + 1];
+        Read_Data[23:16] = DATA[Memory_Address + 2];
+        Read_Data[31:24] = DATA[Memory_Address + 3];
+        Read_Data[39:32] = DATA[Memory_Address + 4];
+        Read_Data[47:40] = DATA[Memory_Address + 5];
+        Read_Data[55:48] = DATA[Memory_Address + 6];
+        Read_Data[63:56] = DATA[Memory_Address + 7];
 
     end
 end
@@ -62,14 +62,14 @@ begin
     if (MemWrite == 1)
     begin
         // Write 8-bytes of data
-        DATA[Mem_Addr + 0] = Write_Data[7:0];
-        DATA[Mem_Addr + 1] = Write_Data[15:8];
-        DATA[Mem_Addr + 2] = Write_Data[23:16];
-        DATA[Mem_Addr + 3] = Write_Data[31:24];
-        DATA[Mem_Addr + 4] = Write_Data[39:32];
-        DATA[Mem_Addr + 5] = Write_Data[47:40];
-        DATA[Mem_Addr + 6] = Write_Data[55:48];
-        DATA[Mem_Addr + 7] = Write_Data[63:56];
+        DATA[Memory_Address + 0] = Write_Data[7:0];
+        DATA[Memory_Address + 1] = Write_Data[15:8];
+        DATA[Memory_Address + 2] = Write_Data[23:16];
+        DATA[Memory_Address + 3] = Write_Data[31:24];
+        DATA[Memory_Address + 4] = Write_Data[39:32];
+        DATA[Memory_Address + 5] = Write_Data[47:40];
+        DATA[Memory_Address + 6] = Write_Data[55:48];
+        DATA[Memory_Address + 7] = Write_Data[63:56];
     end
 end
 endmodule

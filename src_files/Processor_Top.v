@@ -114,7 +114,7 @@ Control_Unit CU_module_1(.opcode(opcode),
 Imm_Data_Extractor IDE_module_1(.Instruction(instruction), // the 32-bit Instruction
         .immediate(immediate_data));
 
-Register_File RF_module_1(.clock(clk),
+Register_File RF_module_1(.clock(clock),
         .reset(reset),
         .Write_Data(write_data),
         .rs1(rs1),
@@ -130,7 +130,7 @@ ALU_Control ALUC_module_1(.ALUOp(sig_ALUOp),
 
 Mux_2x1 ALU_Mux(.a(read_data2),
         .b(immediate_data),
-        .sel_bit1(ALUSrc),
+        .sel_bit(sig_ALUSrc),
         .data_out(ALU_mux_O));
 
 ALU_64_bit ALU_module_1(.a(read_data1), 
