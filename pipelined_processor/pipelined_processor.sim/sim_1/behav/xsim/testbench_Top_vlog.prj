@@ -1,0 +1,21 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../src_files/ALU_64_bit.v" \
+"../../../../../src_files/ALU_Control.v" \
+"../../../../../src_files/Adder.v" \
+"../../../../../src_files/Control_Unit.v" \
+"../../../../../src_files/Data_Memory.v" \
+"../../../../../src_files/Imm_Data_Extractor.v" \
+"../../../../../src_files/Instruction_Memory.v" \
+"../../../../../src_files/Instruction_Parser.v" \
+"../../../../../src_files/Mux_2x1.v" \
+"../../../../../src_files/Processor_Top.v" \
+"../../../../../src_files/Program_Counter.v" \
+"../../../../../src_files/Register_File.v" \
+"../../../../pipelined_processor.srcs/sim_1/new/testbench_Top.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,18 @@
+0.7
+2020.1
+May 27 2020
+20:09:33
+E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim/glbl.v,1590624368,verilog,,,,glbl,,,,,,,,
+E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.srcs/sim_1/new/testbench_Top.v,1681798852,verilog,,,,testbench_Top,,,,,,,,
+E:/pipelined_riscv_processor/src_files/ALU_64_bit.v,1681301754,verilog,,E:/pipelined_riscv_processor/src_files/ALU_Control.v,,ALU_64_bit,,,,,,,,
+E:/pipelined_riscv_processor/src_files/ALU_Control.v,1680668386,verilog,,E:/pipelined_riscv_processor/src_files/Adder.v,,ALU_Control,,,,,,,,
+E:/pipelined_riscv_processor/src_files/Adder.v,1678251438,verilog,,E:/pipelined_riscv_processor/src_files/Control_Unit.v,,Adder,,,,,,,,
+E:/pipelined_riscv_processor/src_files/Control_Unit.v,1681300930,verilog,,E:/pipelined_riscv_processor/src_files/Data_Memory.v,,Control_Unit,,,,,,,,
+E:/pipelined_riscv_processor/src_files/Data_Memory.v,1681798626,verilog,,E:/pipelined_riscv_processor/src_files/Imm_Data_Extractor.v,,Data_Memory,,,,,,,,
+E:/pipelined_riscv_processor/src_files/Imm_Data_Extractor.v,1681239120,verilog,,E:/pipelined_riscv_processor/src_files/Instruction_Memory.v,,Imm_Data_Extractor,,,,,,,,
+E:/pipelined_riscv_processor/src_files/Instruction_Memory.v,1681802507,verilog,,E:/pipelined_riscv_processor/src_files/Instruction_Parser.v,,Instruction_Memory,,,,,,,,
+E:/pipelined_riscv_processor/src_files/Instruction_Parser.v,1681239143,verilog,,E:/pipelined_riscv_processor/src_files/Mux_2x1.v,,Instruction_Parser,,,,,,,,
+E:/pipelined_riscv_processor/src_files/Mux_2x1.v,1681239148,verilog,,E:/pipelined_riscv_processor/src_files/Processor_Top.v,,Mux_2x1,,,,,,,,
+E:/pipelined_riscv_processor/src_files/Processor_Top.v,1681798881,verilog,,E:/pipelined_riscv_processor/src_files/Program_Counter.v,,Processor_Top,,,,,,,,
+E:/pipelined_riscv_processor/src_files/Program_Counter.v,1681302092,verilog,,E:/pipelined_riscv_processor/src_files/Register_File.v,,Program_Counter,,,,,,,,
+E:/pipelined_riscv_processor/src_files/Register_File.v,1681798718,verilog,,E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.srcs/sim_1/new/testbench_Top.v,,Register_File,,,,,,,,
