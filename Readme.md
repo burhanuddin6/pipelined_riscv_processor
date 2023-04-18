@@ -13,3 +13,5 @@ Usage
 -----
 The sources as well as a vivado project is added to this repository making it easy to use. Clone the whole repo and start working with Vivado.
 Make sure to add the (if any) new src files to the src_files folder and then add it to the vivado project using Addfiles option.
+
+**Do not commit to main directly as this may disrupt the workflow. Instead work in another branch and open a pull request when merging**
