@@ -26,7 +26,15 @@ input[63:0] Write_Data, // 64 bit data input
 input clock, // clock
 input MemWrite, // MemWrite signal from the control unit that determines the write operation
 input MemRead, // MemRead signal from the control unit that determines the read operation
-output reg [63:0] Read_Data ); // 64 bit output in case if data is read
+output reg [63:0] Read_Data, // 64 bit output in case if data is read 
+
+output [63:0] DataMem0,
+output [63:0] DataMem1,
+output [63:0] DataMem2,
+output [63:0] DataMem3,
+output [63:0] DataMem4,
+output [63:0] DataMem5);
+
 reg [7:0] DATA [63:0]; // 64-bytes Data Memory 
 integer counter; // integer i used for forloop
 initial 
@@ -37,6 +45,7 @@ begin
     DATA[counter] = counter;    
 end
 end
+
 // Do if any input changes
 always @(*)
 begin
@@ -72,4 +81,62 @@ begin
         DATA[Memory_Address + 7] = Write_Data[63:56];
     end
 end
+
+
+assign DataMem0[7:0] = DATA[0];
+assign DataMem0[15:8] = DATA[0 + 1];
+assign DataMem0[23:16] = DATA[0 + 2];
+assign DataMem0[31:24] = DATA[0 + 3];
+assign DataMem0[39:32] = DATA[0 + 4];
+assign DataMem0[47:40] = DATA[0 + 5];
+assign DataMem0[55:48] = DATA[0 + 6];
+assign DataMem0[63:56] = DATA[0 + 7]
+
+assign DataMem1[7:0] = DATA[8];
+assign DataMem1[15:8] = DATA[8 + 1];
+assign DataMem1[23:16] = DATA[8 + 2];
+assign DataMem1[31:24] = DATA[8 + 3];
+assign DataMem1[39:32] = DATA[8 + 4];
+assign DataMem1[47:40] = DATA[8 + 5];
+assign DataMem1[55:48] = DATA[8 + 6];
+assign DataMem1[63:56] = DATA[8 + 7]
+
+assign DataMem2[7:0] = DATA[16];
+assign DataMem2[15:8] = DATA[16 + 1];
+assign DataMem2[23:16] = DATA[16 + 2];
+assign DataMem2[31:24] = DATA[16 + 3];
+assign DataMem2[39:32] = DATA[16 + 4];
+assign DataMem2[47:40] = DATA[16 + 5];
+assign DataMem2[55:48] = DATA[16 + 6];
+assign DataMem2[63:56] = DATA[16 + 7];
+
+assign DataMem3[7:0] = DATA[24];
+assign DataMem3[15:8] = DATA[24 + 1];
+assign DataMem3[23:16] = DATA[24 + 2];
+assign DataMem3[31:24] = DATA[24 + 3];
+assign DataMem3[39:32] = DATA[24 + 4];
+assign DataMem3[47:40] = DATA[24 + 5];
+assign DataMem3[55:48] = DATA[24 + 6];
+assign DataMem3[63:56] = DATA[24 + 7];
+
+assign DataMem4[7:0] = DATA[32];
+assign DataMem4[15:8] = DATA[32 + 1];
+assign DataMem4[23:16] = DATA[32 + 2];
+assign DataMem4[31:24] = DATA[32 + 3];
+assign DataMem4[39:32] = DATA[32 + 4];
+assign DataMem4[47:40] = DATA[32 + 5];
+assign DataMem4[55:48] = DATA[32 + 6];
+assign DataMem4[63:56] = DATA[32 + 7];
+
+assign DataMem5[7:0] = DATA[40];
+assign DataMem5[15:8] = DATA[40 + 1];
+assign DataMem5[23:16] = DATA[40 + 2];
+assign DataMem5[31:24] = DATA[40 + 3];
+assign DataMem5[39:32] = DATA[40 + 4];
+assign DataMem5[47:40] = DATA[40 + 5];
+assign DataMem5[55:48] = DATA[40 + 6];
+assign DataMem5[63:56] = DATA[40 + 7];
+
+
 endmodule
+

@@ -81,7 +81,7 @@ Adder Adder_1(.a(pc_out),
 
 // Branch instruction adder. immediate data is shifted left by 1.
 Adder Adder_2(.a(pc_out), 
-        .b(immediate_data*2), 
+        .b(immediate_data), 
         .out(pc_mux_1));
 
 Mux_2x1 Branch_Mux(.a(pc_mux_0),

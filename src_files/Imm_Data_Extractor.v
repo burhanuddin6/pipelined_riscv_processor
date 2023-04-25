@@ -29,12 +29,12 @@ output reg [63:0] immediate // sign extended immediate
 //mux u1(0,1,Instruction[5],toggle1); // t1 = Instruction[5]
 //mux u2(0,1,Instruction[6],toggle2); // t2 = Instruction[6]
 
-always @(Instruction[6:5]) // two bit case statement, with 4 possible configurations
+always @(Instruction) // two bit case statement, with 4 possible configurations
 begin
 case(Instruction[6:5])
     2'b00: // I format
     begin
-        immediate = {{52{Instruction[31]}},Instruction[31:20]};
+        immediate = {{52{Instruction[31]}},Instruction[31:20]};            
     end 
     2'b01: // S-format
     begin

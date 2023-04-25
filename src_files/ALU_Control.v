@@ -31,6 +31,7 @@ module ALU_Control
 		case(ALUOp)
 			2'b00: Operation = 4'b0010;
 			2'b01: Operation = 4'b0110;
+			2'b11: Operation = 4'b0111;
 			2'b10:
 			begin 
 			case(Funct)
@@ -38,8 +39,10 @@ module ALU_Control
 				4'b1000: Operation = 4'b0110;
 				4'b0111: Operation = 4'b0000;
 				4'b0110: Operation = 4'b0001;
+				default: Operation = 4'b0010;	
 			endcase
 			end
+			default: Operation = 4'bx;
 		endcase
 	end
 	

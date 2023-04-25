@@ -2,18 +2,73 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Tue Apr 18 12:18:08 2023
-# Process ID: 16112
+# Start of session at: Mon Apr 24 21:13:05 2023
+# Process ID: 11500
 # Current directory: E:/pipelined_riscv_processor/pipelined_processor
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1332 E:\pipelined_riscv_processor\pipelined_processor\pipelined_processor.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15992 E:\pipelined_riscv_processor\pipelined_processor\pipelined_processor.xpr
 # Log file: E:/pipelined_riscv_processor/pipelined_processor/vivado.log
 # Journal file: E:/pipelined_riscv_processor/pipelined_processor\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.xpr
 update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
 launch_simulation
 source testbench_Top.tcl
 close_sim
 launch_simulation
 source testbench_Top.tcl
+close_sim
+launch_simulation
+source testbench_Top.tcl
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+update_compile_order -fileset sources_1
+launch_simulation
+source testbench_Top.tcl
+close_sim
+launch_simulation
+source testbench_Top.tcl
+close_sim
+launch_simulation
+source testbench_Top.tcl
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source testbench_Top.tcl
+close_sim
+launch_simulation
+source testbench_Top.tcl
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source testbench_Top.tcl
+close_sim
+launch_simulation
+source testbench_Top.tcl
+close_sim
+launch_simulation
+source testbench_Top.tcl
+close_sim
+launch_simulation
+source testbench_Top.tcl
+close_sim
+launch_simulation
+source testbench_Top.tcl
+close_sim
+launch_simulation
+source testbench_Top.tcl
+close_sim
+launch_simulation
+source testbench_Top.tcl
+close_sim
+launch_simulation
+source testbench_Top.tcl
+close_sim
+launch_simulation
+source testbench_Top.tcl
+update_compile_order -fileset sources_1

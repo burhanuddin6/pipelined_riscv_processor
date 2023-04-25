@@ -5,11 +5,15 @@ verilog xil_defaultlib  \
 "../../../../../src_files/Adder.v" \
 "../../../../../src_files/Control_Unit.v" \
 "../../../../../src_files/Data_Memory.v" \
+"../../../../../src_files/EXMEM.v" \
+"../../../../../src_files/IDEX.v" \
+"../../../../../src_files/IFID.v" \
 "../../../../../src_files/Imm_Data_Extractor.v" \
 "../../../../../src_files/Instruction_Memory.v" \
 "../../../../../src_files/Instruction_Parser.v" \
+"../../../../../src_files/MEMWB.v" \
 "../../../../../src_files/Mux_2x1.v" \
-"../../../../../src_files/Processor_Top.v" \
+"../../../../../src_files/Pipelined_Processor.v" \
 "../../../../../src_files/Program_Counter.v" \
 "../../../../../src_files/Register_File.v" \
 "../../../../pipelined_processor.srcs/sim_1/new/testbench_Top.v" \

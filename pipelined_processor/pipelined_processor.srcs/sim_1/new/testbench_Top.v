@@ -40,10 +40,21 @@ wire [63:0] read_data1;
 wire [63:0] read_data2;
 wire [63:0] immediate_data;
 wire [63:0] ALU_Result;
-wire sig_zero;
 wire [63:0] mem_read_data;
+wire sig_zero;
+wire sig_Branch;
+wire sig_MemRead;
+wire sig_MemToReg;
+wire [1:0] sig_ALUOp;
+wire sig_MemWrite;
+wire sig_ALUSrc;
+wire sig_RegWrite;
+wire [3:0]sig_operation;
+wire sig_Shift;
+wire sig_zero;
 
-Processor_Top Test(.clock(clk), .reset(reset),
+
+Pipelined_Processor Test(.clock(clk), .reset(reset),
 
 // program counter wires
 .pc_in(pc_in),
@@ -66,7 +77,17 @@ Processor_Top Test(.clock(clk), .reset(reset),
 .ALU_Result(ALU_Result),
 .mem_read_data(mem_read_data),
 
-.sig_zero(sig_zero));
+.sig_zero(sig_zero),
+.sig_Branch(sig_Branch),
+.sig_MemRead(sig_MemRead),
+.sig_MemToReg(sig_MemToReg),
+.sig_ALUOp(sig_ALUOp),
+.sig_MemWrite(sig_MemWrite),
+.sig_ALUSrc(sig_ALUSrc),
+.sig_RegWrite(sig_RegWrite),
+.sig_operation(sig_operation),
+.sig_Shift(sig_Shift)
+);
 
 initial begin
 clk = 1'b0; reset = 1'b0;
