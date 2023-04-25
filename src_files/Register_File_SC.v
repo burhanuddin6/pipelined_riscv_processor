@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Register_File(
+module Register_File_SC(
 input clock,
 input reset,
 input [63:0] Write_Data,
@@ -50,7 +50,7 @@ begin
     end
 end
 
-always @(*) // only at pos edge of clock
+always @(posedge clock) // only at pos edge of clock
 begin
     if (RegWrite == 1)
     begin
@@ -66,7 +66,7 @@ assign RegFile3 = REG_MEMORY[3];
 assign RegFile4 = REG_MEMORY[4];
 assign RegFile5 = REG_MEMORY[5];
 
-assign #1 Read_Data_1 = REG_MEMORY[rs1];
-assign #1 Read_Data_2 = REG_MEMORY[rs2];
+assign Read_Data_1 = REG_MEMORY[rs1];
+assign Read_Data_2 = REG_MEMORY[rs2];
 
 endmodule

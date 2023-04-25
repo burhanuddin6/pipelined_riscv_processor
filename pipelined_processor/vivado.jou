@@ -83,3 +83,30 @@ source testbench_Top.tcl
 close_sim
 launch_simulation
 source testbench_Top.tcl
+close_sim
+launch_simulation
+source testbench_Top.tcl
+close_sim
+launch_simulation
+source testbench_Top.tcl
+close_sim
+launch_simulation
+source testbench_Top.tcl
+close_sim
+launch_simulation
+source testbench_Top.tcl
+close_sim
+launch_simulation
+source testbench_Top.tcl
+close_sim
+launch_simulation
+source testbench_Top.tcl
+close_sim
+launch_simulation
+source testbench_Top.tcl
+add_files -norecurse E:/pipelined_riscv_processor/src_files/Register_File_SC.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source testbench_Top.tcl

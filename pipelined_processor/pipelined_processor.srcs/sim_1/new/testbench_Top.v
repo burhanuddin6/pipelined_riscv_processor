@@ -67,7 +67,7 @@ wire [63:0] DataMem3;
 wire [63:0] DataMem4;
 wire [63:0] DataMem5;
 
-Pipelined_Processor Test(.clock(clk), .reset(reset),
+Processor_Top Test(.clock(clk), .reset(reset),
 
 // program counter wires
 .pc_in(pc_in),
