@@ -26,16 +26,16 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_fi
 INFO: [VRFC 10-311] analyzing module Mux_2x1
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Pipelined_Processor.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Pipelined_Processor
-INFO: [VRFC 10-2458] undeclared symbol EXMEM_PC, assumed default net type wire [E:/pipelined_riscv_processor/src_files/Pipelined_Processor.v:77]
-INFO: [VRFC 10-2458] undeclared symbol EXMEM_Branch, assumed default net type wire [E:/pipelined_riscv_processor/src_files/Pipelined_Processor.v:78]
-INFO: [VRFC 10-2458] undeclared symbol EXMEM_Zero, assumed default net type wire [E:/pipelined_riscv_processor/src_files/Pipelined_Processor.v:78]
-INFO: [VRFC 10-2458] undeclared symbol MEMWB_rd, assumed default net type wire [E:/pipelined_riscv_processor/src_files/Pipelined_Processor.v:119]
-INFO: [VRFC 10-2458] undeclared symbol MEMWB_RegWrite, assumed default net type wire [E:/pipelined_riscv_processor/src_files/Pipelined_Processor.v:120]
-WARNING: [VRFC 10-2938] 'EXMEM_PC' is already implicitly declared on line 77 [E:/pipelined_riscv_processor/src_files/Pipelined_Processor.v:211]
-WARNING: [VRFC 10-2938] 'EXMEM_Branch' is already implicitly declared on line 78 [E:/pipelined_riscv_processor/src_files/Pipelined_Processor.v:213]
-WARNING: [VRFC 10-2938] 'EXMEM_Zero' is already implicitly declared on line 78 [E:/pipelined_riscv_processor/src_files/Pipelined_Processor.v:219]
-WARNING: [VRFC 10-2938] 'MEMWB_RegWrite' is already implicitly declared on line 120 [E:/pipelined_riscv_processor/src_files/Pipelined_Processor.v:267]
-WARNING: [VRFC 10-2938] 'MEMWB_rd' is already implicitly declared on line 119 [E:/pipelined_riscv_processor/src_files/Pipelined_Processor.v:272]
+INFO: [VRFC 10-2458] undeclared symbol EXMEM_PC, assumed default net type wire [E:/pipelined_riscv_processor/src_files/Pipelined_Processor.v:92]
+INFO: [VRFC 10-2458] undeclared symbol EXMEM_Branch, assumed default net type wire [E:/pipelined_riscv_processor/src_files/Pipelined_Processor.v:93]
+INFO: [VRFC 10-2458] undeclared symbol EXMEM_Zero, assumed default net type wire [E:/pipelined_riscv_processor/src_files/Pipelined_Processor.v:93]
+INFO: [VRFC 10-2458] undeclared symbol MEMWB_rd, assumed default net type wire [E:/pipelined_riscv_processor/src_files/Pipelined_Processor.v:134]
+INFO: [VRFC 10-2458] undeclared symbol MEMWB_RegWrite, assumed default net type wire [E:/pipelined_riscv_processor/src_files/Pipelined_Processor.v:135]
+WARNING: [VRFC 10-2938] 'EXMEM_PC' is already implicitly declared on line 92 [E:/pipelined_riscv_processor/src_files/Pipelined_Processor.v:233]
+WARNING: [VRFC 10-2938] 'EXMEM_Branch' is already implicitly declared on line 93 [E:/pipelined_riscv_processor/src_files/Pipelined_Processor.v:235]
+WARNING: [VRFC 10-2938] 'EXMEM_Zero' is already implicitly declared on line 93 [E:/pipelined_riscv_processor/src_files/Pipelined_Processor.v:241]
+WARNING: [VRFC 10-2938] 'MEMWB_RegWrite' is already implicitly declared on line 135 [E:/pipelined_riscv_processor/src_files/Pipelined_Processor.v:295]
+WARNING: [VRFC 10-2938] 'MEMWB_rd' is already implicitly declared on line 134 [E:/pipelined_riscv_processor/src_files/Pipelined_Processor.v:300]
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Program_Counter.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Program_Counter
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Register_File.v" into library xil_defaultlib

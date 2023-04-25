@@ -53,6 +53,19 @@ wire [3:0]sig_operation;
 wire sig_Shift;
 wire sig_zero;
 
+wire [63:0] RegFile0;
+wire [63:0] RegFile1;
+wire [63:0] RegFile2;
+wire [63:0] RegFile3;
+wire [63:0] RegFile4;
+wire [63:0] RegFile5;
+
+wire [63:0] DataMem0;
+wire [63:0] DataMem1;
+wire [63:0] DataMem2;
+wire [63:0] DataMem3;
+wire [63:0] DataMem4;
+wire [63:0] DataMem5;
 
 Pipelined_Processor Test(.clock(clk), .reset(reset),
 
@@ -86,7 +99,21 @@ Pipelined_Processor Test(.clock(clk), .reset(reset),
 .sig_ALUSrc(sig_ALUSrc),
 .sig_RegWrite(sig_RegWrite),
 .sig_operation(sig_operation),
-.sig_Shift(sig_Shift)
+.sig_Shift(sig_Shift),
+
+.RegFile0(RegFile0),
+.RegFile1(RegFile1),
+.RegFile2(RegFile2),
+.RegFile3(RegFile3),
+.RegFile4(RegFile4),
+.RegFile5(RegFile5),
+
+.DataMem0(DataMem0),
+.DataMem1(DataMem1),
+.DataMem2(DataMem2),
+.DataMem3(DataMem3),
+.DataMem4(DataMem4),
+.DataMem5(DataMem5)
 );
 
 initial begin

@@ -72,3 +72,14 @@ close_sim
 launch_simulation
 source testbench_Top.tcl
 update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source testbench_Top.tcl
+close_sim
+launch_simulation
+source testbench_Top.tcl
+close_sim
+launch_simulation
+source testbench_Top.tcl

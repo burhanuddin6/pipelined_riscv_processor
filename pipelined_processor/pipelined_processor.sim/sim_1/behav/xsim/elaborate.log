@@ -4,7 +4,7 @@ Running: E:/program_files/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 730
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'b' [E:/pipelined_riscv_processor/src_files/Pipelined_Processor.v:73]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'b' [E:/pipelined_riscv_processor/src_files/Pipelined_Processor.v:88]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis

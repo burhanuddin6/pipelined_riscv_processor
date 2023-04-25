@@ -36,7 +36,7 @@ output [63:0] RegFile1,
 output [63:0] RegFile2,
 output [63:0] RegFile3,
 output [63:0] RegFile4,
-output [63:0] RegFile5,
+output [63:0] RegFile5
     );
 // declare an array of 64-bit registers, Register of size 32
 reg [63:0] REG_MEMORY[32:0];
@@ -46,7 +46,7 @@ begin
     for(i = 0; i < 32; i = i + 1)
     begin
         // loading i in each reg i
-        REG_MEMORY[i] = i;
+        REG_MEMORY[i] = 0;
     end
 end
 
@@ -55,18 +55,17 @@ begin
     if (RegWrite == 1)
     begin
         // write the input data to destination REG_MEMORY
-        REG_MEMORY[rd] = Write_Data;
-        RegFile0 = REG_MEMORY[0];
-        RegFile1 = REG_MEMORY[1];
-        RegFile2 = REG_MEMORY[2];
-        RegFile3 = REG_MEMORY[3];
-        RegFile4 = REG_MEMORY[4];
-        RegFile5 = REG_MEMORY[5];        
+        REG_MEMORY[rd] = Write_Data;        
     end
 end
 
 assign Read_Data_1 = REG_MEMORY[rs1];
 assign Read_Data_2 = REG_MEMORY[rs2];
-
+assign RegFile0 = REG_MEMORY[0];
+assign RegFile1 = REG_MEMORY[1];
+assign RegFile2 = REG_MEMORY[2];
+assign RegFile3 = REG_MEMORY[3];
+assign RegFile4 = REG_MEMORY[4];
+assign RegFile5 = REG_MEMORY[5];
 
 endmodule

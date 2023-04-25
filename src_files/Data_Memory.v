@@ -42,7 +42,7 @@ begin
 // Initializing the DATA with i, where i is simply the address of that byte in memory
 for (counter = 0; counter < 64; counter = counter + 1)
 begin
-    DATA[counter] = counter;    
+    DATA[counter] = 0;    
 end
 end
 
@@ -90,7 +90,7 @@ assign DataMem0[31:24] = DATA[0 + 3];
 assign DataMem0[39:32] = DATA[0 + 4];
 assign DataMem0[47:40] = DATA[0 + 5];
 assign DataMem0[55:48] = DATA[0 + 6];
-assign DataMem0[63:56] = DATA[0 + 7]
+assign DataMem0[63:56] = DATA[0 + 7];
 
 assign DataMem1[7:0] = DATA[8];
 assign DataMem1[15:8] = DATA[8 + 1];
@@ -99,7 +99,7 @@ assign DataMem1[31:24] = DATA[8 + 3];
 assign DataMem1[39:32] = DATA[8 + 4];
 assign DataMem1[47:40] = DATA[8 + 5];
 assign DataMem1[55:48] = DATA[8 + 6];
-assign DataMem1[63:56] = DATA[8 + 7]
+assign DataMem1[63:56] = DATA[8 + 7];
 
 assign DataMem2[7:0] = DATA[16];
 assign DataMem2[15:8] = DATA[16 + 1];
