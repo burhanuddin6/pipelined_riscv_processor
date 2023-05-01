@@ -33,14 +33,23 @@ output [63:0] DataMem1,
 output [63:0] DataMem2,
 output [63:0] DataMem3,
 output [63:0] DataMem4,
-output [63:0] DataMem5);
+output [63:0] DataMem5,
 
-reg [7:0] DATA [63:0]; // 64-bytes Data Memory 
+output [63:0] Stack0,
+output [63:0] Stack1,
+output [63:0] Stack2,
+output [63:0] Stack3,
+output [63:0] Stack4,
+output [63:0] Stack5);
+
+parameter i = 200;
+
+reg [7:0] DATA [i:0]; // 200-bytes Data Memory 
 integer counter; // integer i used for forloop
 initial 
 begin
 // Initializing the DATA with i, where i is simply the address of that byte in memory
-for (counter = 0; counter < 64; counter = counter + 1)
+for (counter = 0; counter < i; counter = counter + 1)
 begin
     DATA[counter] = 0;    
 end
@@ -137,6 +146,58 @@ assign DataMem5[47:40] = DATA[40 + 5];
 assign DataMem5[55:48] = DATA[40 + 6];
 assign DataMem5[63:56] = DATA[40 + 7];
 
+assign Stack0[7:0] = DATA[i - 8];
+assign Stack0[15:8] = DATA[i - 8 + 1];
+assign Stack0[23:16] = DATA[i - 8 + 2];
+assign Stack0[31:24] = DATA[i - 8 + 3];
+assign Stack0[39:32] = DATA[i - 8 + 4];
+assign Stack0[47:40] = DATA[i - 8 + 5];
+assign Stack0[55:48] = DATA[i - 8 + 6];
+assign Stack0[63:56] = DATA[i - 8 + 7];
 
+assign Stack1[7:0] = DATA[i - 16];
+assign Stack1[15:8] = DATA[i - 16 + 1];
+assign Stack1[23:16] = DATA[i - 16 + 2];
+assign Stack1[31:24] = DATA[i - 16 + 3];
+assign Stack1[39:32] = DATA[i - 16 + 4];
+assign Stack1[47:40] = DATA[i - 16 + 5];
+assign Stack1[55:48] = DATA[i - 16 + 6];
+assign Stack1[63:56] = DATA[i - 16 + 7];
+
+assign Stack2[7:0] = DATA[i - 24];
+assign Stack2[15:8] = DATA[i - 24 + 1];
+assign Stack2[23:16] = DATA[i - 24 + 2];
+assign Stack2[31:24] = DATA[i - 24 + 3];
+assign Stack2[39:32] = DATA[i - 24 + 4];
+assign Stack2[47:40] = DATA[i - 24 + 5];
+assign Stack2[55:48] = DATA[i - 24 + 6];
+assign Stack2[63:56] = DATA[i - 24 + 7];
+
+assign Stack3[7:0] = DATA[i - 32];
+assign Stack3[15:8] = DATA[i - 32 + 1];
+assign Stack3[23:16] = DATA[i - 32 + 2];
+assign Stack3[31:24] = DATA[i - 32 + 3];
+assign Stack3[39:32] = DATA[i - 32 + 4];
+assign Stack3[47:40] = DATA[i - 32 + 5];
+assign Stack3[55:48] = DATA[i - 32 + 6];
+assign Stack3[63:56] = DATA[i - 32 + 7];
+
+assign Stack4[7:0] = DATA[i - 40];
+assign Stack4[15:8] = DATA[i - 40 + 1];
+assign Stack4[23:16] = DATA[i - 40 + 2];
+assign Stack4[31:24] = DATA[i - 40 + 3];
+assign Stack4[39:32] = DATA[i - 40 + 4];
+assign Stack4[47:40] = DATA[i - 40 + 5];
+assign Stack4[55:48] = DATA[i - 40 + 6];
+assign Stack4[63:56] = DATA[i - 40 + 7];
+
+assign Stack5[7:0] = DATA[i - 48];
+assign Stack5[15:8] = DATA[i - 48 + 1];
+assign Stack5[23:16] = DATA[i - 48 + 2];
+assign Stack5[31:24] = DATA[i - 48 + 3];
+assign Stack5[39:32] = DATA[i - 48 + 4];
+assign Stack5[47:40] = DATA[i - 48 + 5];
+assign Stack5[55:48] = DATA[i - 48 + 6];
+assign Stack5[63:56] = DATA[i - 48 + 7];
 endmodule
 

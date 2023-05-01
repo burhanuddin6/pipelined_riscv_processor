@@ -1,6 +1,6 @@
-addi x1, x0, 1
-add x2, x0, x0
-add x2, x0, x0
-sd x1, 0(x0)
-add x1, x0, x0
-add x1, x0, x0
+ld x19, 0(sp) 
+ld x20, 8(sp) 
+ld x21, 16(sp) 
+ld x22, 24(sp) 
+ld x1, 32(sp) 
+addi sp, sp, 40

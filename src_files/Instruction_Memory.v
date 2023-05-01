@@ -24,9 +24,8 @@ module Instruction_Memory(
 input [63:0] Instruction_Address, // Input instruction memory
 output reg [31:0] Instruction); // Output 32-bit instruction
 
-reg [7:0] MEMORY [100:0]; // 16-bytes instruction memory
-integer i; // integer i used by for loop
-reg t;
+reg [7:0] MEMORY [300:0]; // 16-bytes instruction memory
+
 initial
 begin
 $readmemb("instructions.mem", MEMORY);

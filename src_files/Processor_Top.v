@@ -69,7 +69,14 @@ output [63:0] DataMem1,
 output [63:0] DataMem2,
 output [63:0] DataMem3,
 output [63:0] DataMem4,
-output [63:0] DataMem5
+output [63:0] DataMem5,
+
+output [63:0] Stack0,
+output [63:0] Stack1,
+output [63:0] Stack2,
+output [63:0] Stack3,
+output [63:0] Stack4,
+output [63:0] Stack5
 
     );
 
@@ -171,7 +178,13 @@ Data_Memory DM_module_1(.Memory_Address(ALU_Result), // 64 bit input specifiying
         .DataMem2(DataMem2),
         .DataMem3(DataMem3),
         .DataMem4(DataMem4),
-        .DataMem5(DataMem5) ); // 64 bit output in case if data is read
+        .DataMem5(DataMem5),
+        .Stack0(Stack0),
+        .Stack1(Stack1),
+        .Stack2(Stack2),
+        .Stack3(Stack3),
+        .Stack4(Stack4),
+        .Stack5(Stack5) ); // 64 bit output in case if data is read
 
 Mux_2x1 MEM_Mux(.a(ALU_Result),
         .b(mem_read_data),

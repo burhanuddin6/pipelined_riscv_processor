@@ -67,6 +67,13 @@ wire [63:0] DataMem3;
 wire [63:0] DataMem4;
 wire [63:0] DataMem5;
 
+wire [63:0] Stack0;
+wire [63:0] Stack1;
+wire [63:0] Stack2;
+wire [63:0] Stack3;
+wire [63:0] Stack4;
+wire [63:0] Stack5;
+
 Processor_Top Test(.clock(clk), .reset(reset),
 
 // program counter wires
@@ -113,7 +120,14 @@ Processor_Top Test(.clock(clk), .reset(reset),
 .DataMem2(DataMem2),
 .DataMem3(DataMem3),
 .DataMem4(DataMem4),
-.DataMem5(DataMem5)
+.DataMem5(DataMem5),
+
+.Stack0(Stack0),
+.Stack1(Stack1),
+.Stack2(Stack2),
+.Stack3(Stack3),
+.Stack4(Stack4),
+.Stack5(Stack5)
 );
 
 initial begin
