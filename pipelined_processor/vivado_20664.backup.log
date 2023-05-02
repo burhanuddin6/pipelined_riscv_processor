@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue May  2 15:37:28 2023
+# Process ID: 20664
+# Current directory: E:/pipelined_riscv_processor/pipelined_processor
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7556 E:\pipelined_riscv_processor\pipelined_processor\pipelined_processor.xpr
+# Log file: E:/pipelined_riscv_processor/pipelined_processor/vivado.log
+# Journal file: E:/pipelined_riscv_processor/pipelined_processor\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/program_files/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 1315.023 ; gain = 0.000
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+boost::filesystem::remove: The process cannot access the file because it is being used by another process: "E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim/elaborate.log"
+launch_simulation
+Command: launch_simulation 
+boost::filesystem::remove: The process cannot access the file because it is being used by another process: "E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim/elaborate.log"
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue May  2 15:41:24 2023...
