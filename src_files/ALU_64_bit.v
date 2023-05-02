@@ -38,11 +38,16 @@ Sub	= 4'b0110,
 NOR = 4'b1100,
 LESSTHAN = 4'b0111;
 
+reg signed [64:0] signed_a;
+reg signed [64:0] signed_b;
+
 initial
 Zero <= 0;
 
 always @ (ALUOp, a, b)
 begin
+    signed_a <= a;
+    signed_b <= b;
 	case (ALUOp)
 		AND: Result = a & b;
 		OR:	 Result = a | b;
@@ -54,7 +59,23 @@ begin
 			endcase
 		Sub: Result = a - b;
 		NOR: Result = ~(a | b);
-		LESSTHAN: Result = 0;
+		LESSTHAN:
+		begin
+		  if (a[63] == 1)
+		  begin
+		      if (b[63] == 1)
+		          Result = ( a < b )? 0: 1;
+		      else
+		          Result = 0;
+		  end
+		  else
+		  begin
+		      if (b[63] == 1)
+		          Result = 1;
+		      else
+		          Result = ( a < b )? 0: 1;
+		  end
+		end
 		
 		default: Result = 64'bx;
 	endcase

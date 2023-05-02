@@ -27,7 +27,7 @@ module Control_Unit
 	output reg [1:0] ALUOp
 );
 
-	always @ (opcode)
+	always @ (opcode or funct3)
 	begin
 		case (opcode)
 			7'b0010011: //slli

@@ -4,10 +4,10 @@ May 27 2020
 20:09:33
 E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim/glbl.v,1590624368,verilog,,,,glbl,,,,,,,,
 E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.srcs/sim_1/new/testbench_Top.v,1682427064,verilog,,,,testbench_Top,,,,,,,,
-E:/pipelined_riscv_processor/src_files/ALU_64_bit.v,1682366568,verilog,,E:/pipelined_riscv_processor/src_files/ALU_Control.v,,ALU_64_bit,,,,,,,,
+E:/pipelined_riscv_processor/src_files/ALU_64_bit.v,1683034651,verilog,,E:/pipelined_riscv_processor/src_files/ALU_Control.v,,ALU_64_bit,,,,,,,,
 E:/pipelined_riscv_processor/src_files/ALU_Control.v,1682366923,verilog,,E:/pipelined_riscv_processor/src_files/Adder.v,,ALU_Control,,,,,,,,
 E:/pipelined_riscv_processor/src_files/Adder.v,1678251438,verilog,,E:/pipelined_riscv_processor/src_files/Control_Unit.v,,Adder,,,,,,,,
-E:/pipelined_riscv_processor/src_files/Control_Unit.v,1682355979,verilog,,E:/pipelined_riscv_processor/src_files/Data_Memory.v,,Control_Unit,,,,,,,,
+E:/pipelined_riscv_processor/src_files/Control_Unit.v,1683040657,verilog,,E:/pipelined_riscv_processor/src_files/Data_Memory.v,,Control_Unit,,,,,,,,
 E:/pipelined_riscv_processor/src_files/Data_Memory.v,1682428522,verilog,,E:/pipelined_riscv_processor/src_files/Imm_Data_Extractor.v,,Data_Memory,,,,,,,,
 E:/pipelined_riscv_processor/src_files/EXMEM.v,1682275397,verilog,,E:/pipelined_riscv_processor/src_files/IDEX.v,,EXMEM,,,,,,,,
 E:/pipelined_riscv_processor/src_files/IDEX.v,1682353023,verilog,,E:/pipelined_riscv_processor/src_files/IFID.v,,IDEX,,,,,,,,
