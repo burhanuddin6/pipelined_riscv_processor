@@ -2225,3 +2225,4 @@ selectCodeEditor("testbench_Top.v", 229, 349); // bP (w, cs)
 selectCodeEditor("testbench_Top.v", 252, 329); // bP (w, cs)
 // TclEventType: DG_GRAPH_STALE
 // TclEventType: FILE_SET_CHANGE
+// WARNING: HEventQueue.dispatchEvent() is taking  1770 ms.
