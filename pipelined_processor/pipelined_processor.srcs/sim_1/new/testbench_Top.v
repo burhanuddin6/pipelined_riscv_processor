@@ -53,6 +53,11 @@ wire [3:0]sig_operation;
 wire sig_Shift;
 wire sig_zero;
 
+wire [63:0] FMux1_out;
+wire [63:0] FMux2_out;
+wire [1:0] sig_ForwardA;
+wire [1:0] sig_ForwardB;
+
 wire [63:0] RegFile0;
 wire [63:0] RegFile1;
 wire [63:0] RegFile2;
@@ -74,7 +79,7 @@ wire [63:0] Stack3;
 wire [63:0] Stack4;
 wire [63:0] Stack5;
 
-Processor_Top Test(.clock(clk), .reset(reset),
+Pipelined_Test Test(.clock(clk), .reset(reset),
 
 // program counter wires
 .pc_in(pc_in),
@@ -107,6 +112,11 @@ Processor_Top Test(.clock(clk), .reset(reset),
 .sig_RegWrite(sig_RegWrite),
 .sig_operation(sig_operation),
 .sig_Shift(sig_Shift),
+
+.FMux1_out(FMux1_out),
+.FMux2_out(FMux2_out),
+.sig_ForwardA(sig_ForwardA),
+.sig_ForwardB(sig_ForwardB),
 
 .RegFile0(RegFile0),
 .RegFile1(RegFile1),

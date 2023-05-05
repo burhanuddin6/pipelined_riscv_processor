@@ -8,20 +8,48 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_fi
 INFO: [VRFC 10-311] analyzing module Control_Unit
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Data_Memory.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Data_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/EXMEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EXMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Forwarding_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Forwarding_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/test/IDEX_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IDEX_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/IFID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IFID
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Imm_Data_Extractor.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Imm_Data_Extractor
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Instruction_Memory.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Instruction_Memory
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Instruction_Parser.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Instruction_Parser
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/MEMWB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MEMWB
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Mux_2x1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Mux_2x1
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Processor_Top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Processor_Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Mux_3x1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux_3x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Pipelined_Test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pipelined_Test
+INFO: [VRFC 10-2458] undeclared symbol EXMEM_PC, assumed default net type wire [E:/pipelined_riscv_processor/src_files/Pipelined_Test.v:104]
+INFO: [VRFC 10-2458] undeclared symbol EXMEM_Branch, assumed default net type wire [E:/pipelined_riscv_processor/src_files/Pipelined_Test.v:105]
+INFO: [VRFC 10-2458] undeclared symbol EXMEM_Zero, assumed default net type wire [E:/pipelined_riscv_processor/src_files/Pipelined_Test.v:105]
+INFO: [VRFC 10-2458] undeclared symbol MEMWB_rd, assumed default net type wire [E:/pipelined_riscv_processor/src_files/Pipelined_Test.v:146]
+INFO: [VRFC 10-2458] undeclared symbol MEMWB_RegWrite, assumed default net type wire [E:/pipelined_riscv_processor/src_files/Pipelined_Test.v:147]
+INFO: [VRFC 10-2458] undeclared symbol EXMEM_ALU_Result, assumed default net type wire [E:/pipelined_riscv_processor/src_files/Pipelined_Test.v:236]
+INFO: [VRFC 10-2458] undeclared symbol EXMEM_rd, assumed default net type wire [E:/pipelined_riscv_processor/src_files/Pipelined_Test.v:263]
+INFO: [VRFC 10-2458] undeclared symbol EXMEM_RegWrite, assumed default net type wire [E:/pipelined_riscv_processor/src_files/Pipelined_Test.v:265]
+WARNING: [VRFC 10-2938] 'EXMEM_PC' is already implicitly declared on line 104 [E:/pipelined_riscv_processor/src_files/Pipelined_Test.v:272]
+WARNING: [VRFC 10-2938] 'EXMEM_Branch' is already implicitly declared on line 105 [E:/pipelined_riscv_processor/src_files/Pipelined_Test.v:274]
+WARNING: [VRFC 10-2938] 'EXMEM_RegWrite' is already implicitly declared on line 265 [E:/pipelined_riscv_processor/src_files/Pipelined_Test.v:278]
+WARNING: [VRFC 10-2938] 'EXMEM_Zero' is already implicitly declared on line 105 [E:/pipelined_riscv_processor/src_files/Pipelined_Test.v:280]
+WARNING: [VRFC 10-2938] 'EXMEM_ALU_Result' is already implicitly declared on line 236 [E:/pipelined_riscv_processor/src_files/Pipelined_Test.v:281]
+WARNING: [VRFC 10-2938] 'EXMEM_rd' is already implicitly declared on line 263 [E:/pipelined_riscv_processor/src_files/Pipelined_Test.v:283]
+WARNING: [VRFC 10-2938] 'MEMWB_RegWrite' is already implicitly declared on line 147 [E:/pipelined_riscv_processor/src_files/Pipelined_Test.v:340]
+WARNING: [VRFC 10-2938] 'MEMWB_rd' is already implicitly declared on line 146 [E:/pipelined_riscv_processor/src_files/Pipelined_Test.v:345]
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Program_Counter.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Program_Counter
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Register_File_SC.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Register_File_SC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Register_File.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register_File
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.srcs/sim_1/new/testbench_Top.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module testbench_Top
 WARNING: [VRFC 10-3248] data object 'sig_zero' is already declared [E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.srcs/sim_1/new/testbench_Top.v:54]

@@ -1,6 +1,4 @@
-ld x19, 0(sp) 
-ld x20, 8(sp) 
-ld x21, 16(sp) 
-ld x22, 24(sp) 
-ld x1, 32(sp) 
-addi sp, sp, 40
+addi x2, x0, 9
+addi x0, x0, 0
+sd x2, 0(x0)
+ld x5, 0(x0)
