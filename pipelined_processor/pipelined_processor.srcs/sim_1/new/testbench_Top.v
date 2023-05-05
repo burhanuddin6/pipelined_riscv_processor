@@ -58,6 +58,10 @@ wire [63:0] FMux2_out;
 wire [1:0] sig_ForwardA;
 wire [1:0] sig_ForwardB;
 
+wire sig_IFIDWrite;
+wire sig_PCWrite;
+wire sigStall;
+
 wire [63:0] RegFile0;
 wire [63:0] RegFile1;
 wire [63:0] RegFile2;
@@ -117,6 +121,10 @@ Pipelined_Test Test(.clock(clk), .reset(reset),
 .FMux2_out(FMux2_out),
 .sig_ForwardA(sig_ForwardA),
 .sig_ForwardB(sig_ForwardB),
+
+.sig_IFIDWrite(sig_IFIDWrite),
+.sig_PCWrite(sig_PCWrite),
+.sigStall(sigStall),
 
 .RegFile0(RegFile0),
 .RegFile1(RegFile1),

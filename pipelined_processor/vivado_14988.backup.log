@@ -1,0 +1,1068 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue May  2 15:42:14 2023
+# Process ID: 14988
+# Current directory: E:/pipelined_riscv_processor/pipelined_processor
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17720 E:\pipelined_riscv_processor\pipelined_processor\pipelined_processor.xpr
+# Log file: E:/pipelined_riscv_processor/pipelined_processor/vivado.log
+# Journal file: E:/pipelined_riscv_processor/pipelined_processor\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/program_files/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:44 ; elapsed = 00:00:17 . Memory (MB): peak = 997.617 ; gain = 0.000
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_Top' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim/instructions.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_Top_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+"xelab -wto 73048c6165044e87be9673fa1eae8fe7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_Top_behav xil_defaultlib.testbench_Top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/program_files/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 73048c6165044e87be9673fa1eae8fe7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_Top_behav xil_defaultlib.testbench_Top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'b' [E:/pipelined_riscv_processor/src_files/Processor_Top.v:97]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_Top_behav -key {Behavioral:sim_1:Functional:testbench_Top} -tclbatch {testbench_Top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source testbench_Top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 100000ns
+xsim: Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 997.617 ; gain = 0.000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_Top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 100000ns
+launch_simulation: Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 997.617 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_Top' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim/instructions.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_Top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/ALU_64_bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_64_bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/ALU_Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Control_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Data_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Imm_Data_Extractor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Imm_Data_Extractor
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Instruction_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instruction_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Instruction_Parser.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instruction_Parser
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Mux_2x1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux_2x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Processor_Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Processor_Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Program_Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Program_Counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Register_File_SC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register_File_SC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.srcs/sim_1/new/testbench_Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_Top
+WARNING: [VRFC 10-3248] data object 'sig_zero' is already declared [E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.srcs/sim_1/new/testbench_Top.v:54]
+WARNING: [VRFC 10-3703] second declaration of 'sig_zero' ignored [E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.srcs/sim_1/new/testbench_Top.v:54]
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 997.617 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '6' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+"xelab -wto 73048c6165044e87be9673fa1eae8fe7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_Top_behav xil_defaultlib.testbench_Top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/program_files/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 73048c6165044e87be9673fa1eae8fe7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_Top_behav xil_defaultlib.testbench_Top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'b' [E:/pipelined_riscv_processor/src_files/Processor_Top.v:97]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Program_Counter
+Compiling module xil_defaultlib.Adder
+Compiling module xil_defaultlib.Mux_2x1
+Compiling module xil_defaultlib.Instruction_Memory
+Compiling module xil_defaultlib.Instruction_Parser
+Compiling module xil_defaultlib.Control_Unit
+Compiling module xil_defaultlib.Imm_Data_Extractor
+Compiling module xil_defaultlib.Register_File_SC
+Compiling module xil_defaultlib.ALU_Control
+Compiling module xil_defaultlib.ALU_64_bit
+Compiling module xil_defaultlib.Data_Memory
+Compiling module xil_defaultlib.Processor_Top
+Compiling module xil_defaultlib.testbench_Top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_Top_behav
+
+****** Webtalk v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim/xsim.dir/testbench_Top_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim/xsim.dir/testbench_Top_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Tue May  2 16:11:40 2023. For additional details about this file, please refer to the WebTalk help file at E:/program_files/Vivado/2020.1/doc/webtalk_introduction.html.
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 113.906 ; gain = 17.621
+INFO: [Common 17-206] Exiting Webtalk at Tue May  2 16:11:40 2023...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:18 . Memory (MB): peak = 997.617 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '18' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_Top_behav -key {Behavioral:sim_1:Functional:testbench_Top} -tclbatch {testbench_Top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source testbench_Top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 100000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_Top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 100000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:28 . Memory (MB): peak = 997.617 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_Top' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim/instructions.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_Top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/ALU_64_bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_64_bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/ALU_Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Control_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Data_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Imm_Data_Extractor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Imm_Data_Extractor
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Instruction_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instruction_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Instruction_Parser.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instruction_Parser
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Mux_2x1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux_2x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Processor_Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Processor_Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Program_Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Program_Counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Register_File_SC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register_File_SC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.srcs/sim_1/new/testbench_Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_Top
+WARNING: [VRFC 10-3248] data object 'sig_zero' is already declared [E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.srcs/sim_1/new/testbench_Top.v:54]
+WARNING: [VRFC 10-3703] second declaration of 'sig_zero' ignored [E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.srcs/sim_1/new/testbench_Top.v:54]
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+"xelab -wto 73048c6165044e87be9673fa1eae8fe7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_Top_behav xil_defaultlib.testbench_Top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/program_files/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 73048c6165044e87be9673fa1eae8fe7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_Top_behav xil_defaultlib.testbench_Top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'b' [E:/pipelined_riscv_processor/src_files/Processor_Top.v:97]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Program_Counter
+Compiling module xil_defaultlib.Adder
+Compiling module xil_defaultlib.Mux_2x1
+Compiling module xil_defaultlib.Instruction_Memory
+Compiling module xil_defaultlib.Instruction_Parser
+Compiling module xil_defaultlib.Control_Unit
+Compiling module xil_defaultlib.Imm_Data_Extractor
+Compiling module xil_defaultlib.Register_File_SC
+Compiling module xil_defaultlib.ALU_Control
+Compiling module xil_defaultlib.ALU_64_bit
+Compiling module xil_defaultlib.Data_Memory
+Compiling module xil_defaultlib.Processor_Top
+Compiling module xil_defaultlib.testbench_Top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_Top_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_Top_behav -key {Behavioral:sim_1:Functional:testbench_Top} -tclbatch {testbench_Top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source testbench_Top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 100000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_Top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 100000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 997.617 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_Top' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim/instructions.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_Top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/ALU_64_bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_64_bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/ALU_Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Control_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Data_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Imm_Data_Extractor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Imm_Data_Extractor
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Instruction_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instruction_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Instruction_Parser.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instruction_Parser
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Mux_2x1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux_2x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Processor_Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Processor_Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Program_Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Program_Counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Register_File_SC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register_File_SC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.srcs/sim_1/new/testbench_Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_Top
+WARNING: [VRFC 10-3248] data object 'sig_zero' is already declared [E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.srcs/sim_1/new/testbench_Top.v:54]
+WARNING: [VRFC 10-3703] second declaration of 'sig_zero' ignored [E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.srcs/sim_1/new/testbench_Top.v:54]
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+"xelab -wto 73048c6165044e87be9673fa1eae8fe7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_Top_behav xil_defaultlib.testbench_Top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/program_files/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 73048c6165044e87be9673fa1eae8fe7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_Top_behav xil_defaultlib.testbench_Top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'b' [E:/pipelined_riscv_processor/src_files/Processor_Top.v:97]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Program_Counter
+Compiling module xil_defaultlib.Adder
+Compiling module xil_defaultlib.Mux_2x1
+Compiling module xil_defaultlib.Instruction_Memory
+Compiling module xil_defaultlib.Instruction_Parser
+Compiling module xil_defaultlib.Control_Unit
+Compiling module xil_defaultlib.Imm_Data_Extractor
+Compiling module xil_defaultlib.Register_File_SC
+Compiling module xil_defaultlib.ALU_Control
+Compiling module xil_defaultlib.ALU_64_bit
+Compiling module xil_defaultlib.Data_Memory
+Compiling module xil_defaultlib.Processor_Top
+Compiling module xil_defaultlib.testbench_Top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_Top_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_Top_behav -key {Behavioral:sim_1:Functional:testbench_Top} -tclbatch {testbench_Top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source testbench_Top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 100000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_Top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 100000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 997.617 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_Top' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim/instructions.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_Top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/ALU_64_bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_64_bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/ALU_Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Control_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Data_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Imm_Data_Extractor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Imm_Data_Extractor
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Instruction_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instruction_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Instruction_Parser.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instruction_Parser
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Mux_2x1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux_2x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Processor_Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Processor_Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Program_Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Program_Counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Register_File_SC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register_File_SC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.srcs/sim_1/new/testbench_Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_Top
+WARNING: [VRFC 10-3248] data object 'sig_zero' is already declared [E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.srcs/sim_1/new/testbench_Top.v:54]
+WARNING: [VRFC 10-3703] second declaration of 'sig_zero' ignored [E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.srcs/sim_1/new/testbench_Top.v:54]
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+"xelab -wto 73048c6165044e87be9673fa1eae8fe7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_Top_behav xil_defaultlib.testbench_Top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/program_files/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 73048c6165044e87be9673fa1eae8fe7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_Top_behav xil_defaultlib.testbench_Top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'b' [E:/pipelined_riscv_processor/src_files/Processor_Top.v:97]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Program_Counter
+Compiling module xil_defaultlib.Adder
+Compiling module xil_defaultlib.Mux_2x1
+Compiling module xil_defaultlib.Instruction_Memory
+Compiling module xil_defaultlib.Instruction_Parser
+Compiling module xil_defaultlib.Control_Unit
+Compiling module xil_defaultlib.Imm_Data_Extractor
+Compiling module xil_defaultlib.Register_File_SC
+Compiling module xil_defaultlib.ALU_Control
+Compiling module xil_defaultlib.ALU_64_bit
+Compiling module xil_defaultlib.Data_Memory
+Compiling module xil_defaultlib.Processor_Top
+Compiling module xil_defaultlib.testbench_Top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_Top_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_Top_behav -key {Behavioral:sim_1:Functional:testbench_Top} -tclbatch {testbench_Top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source testbench_Top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 100000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_Top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 100000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 997.617 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_Top' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim/instructions.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_Top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/ALU_64_bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_64_bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/ALU_Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Control_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Data_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Imm_Data_Extractor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Imm_Data_Extractor
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Instruction_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instruction_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Instruction_Parser.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instruction_Parser
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Mux_2x1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux_2x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Processor_Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Processor_Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Program_Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Program_Counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Register_File_SC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register_File_SC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.srcs/sim_1/new/testbench_Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_Top
+WARNING: [VRFC 10-3248] data object 'sig_zero' is already declared [E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.srcs/sim_1/new/testbench_Top.v:54]
+WARNING: [VRFC 10-3703] second declaration of 'sig_zero' ignored [E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.srcs/sim_1/new/testbench_Top.v:54]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+"xelab -wto 73048c6165044e87be9673fa1eae8fe7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_Top_behav xil_defaultlib.testbench_Top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/program_files/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 73048c6165044e87be9673fa1eae8fe7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_Top_behav xil_defaultlib.testbench_Top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'b' [E:/pipelined_riscv_processor/src_files/Processor_Top.v:97]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Program_Counter
+Compiling module xil_defaultlib.Adder
+Compiling module xil_defaultlib.Mux_2x1
+Compiling module xil_defaultlib.Instruction_Memory
+Compiling module xil_defaultlib.Instruction_Parser
+Compiling module xil_defaultlib.Control_Unit
+Compiling module xil_defaultlib.Imm_Data_Extractor
+Compiling module xil_defaultlib.Register_File_SC
+Compiling module xil_defaultlib.ALU_Control
+Compiling module xil_defaultlib.ALU_64_bit
+Compiling module xil_defaultlib.Data_Memory
+Compiling module xil_defaultlib.Processor_Top
+Compiling module xil_defaultlib.testbench_Top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_Top_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_Top_behav -key {Behavioral:sim_1:Functional:testbench_Top} -tclbatch {testbench_Top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source testbench_Top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 100000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_Top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 100000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 997.617 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_Top' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim/instructions.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_Top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/ALU_64_bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_64_bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/ALU_Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Control_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Data_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Imm_Data_Extractor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Imm_Data_Extractor
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Instruction_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instruction_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Instruction_Parser.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instruction_Parser
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Mux_2x1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux_2x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Processor_Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Processor_Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Program_Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Program_Counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Register_File_SC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register_File_SC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.srcs/sim_1/new/testbench_Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_Top
+WARNING: [VRFC 10-3248] data object 'sig_zero' is already declared [E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.srcs/sim_1/new/testbench_Top.v:54]
+WARNING: [VRFC 10-3703] second declaration of 'sig_zero' ignored [E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.srcs/sim_1/new/testbench_Top.v:54]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+"xelab -wto 73048c6165044e87be9673fa1eae8fe7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_Top_behav xil_defaultlib.testbench_Top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/program_files/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 73048c6165044e87be9673fa1eae8fe7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_Top_behav xil_defaultlib.testbench_Top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'b' [E:/pipelined_riscv_processor/src_files/Processor_Top.v:97]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Program_Counter
+Compiling module xil_defaultlib.Adder
+Compiling module xil_defaultlib.Mux_2x1
+Compiling module xil_defaultlib.Instruction_Memory
+Compiling module xil_defaultlib.Instruction_Parser
+Compiling module xil_defaultlib.Control_Unit
+Compiling module xil_defaultlib.Imm_Data_Extractor
+Compiling module xil_defaultlib.Register_File_SC
+Compiling module xil_defaultlib.ALU_Control
+Compiling module xil_defaultlib.ALU_64_bit
+Compiling module xil_defaultlib.Data_Memory
+Compiling module xil_defaultlib.Processor_Top
+Compiling module xil_defaultlib.testbench_Top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_Top_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_Top_behav -key {Behavioral:sim_1:Functional:testbench_Top} -tclbatch {testbench_Top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source testbench_Top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 100000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_Top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 100000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 997.617 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_Top' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim/instructions.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_Top_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+"xelab -wto 73048c6165044e87be9673fa1eae8fe7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_Top_behav xil_defaultlib.testbench_Top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/program_files/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 73048c6165044e87be9673fa1eae8fe7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_Top_behav xil_defaultlib.testbench_Top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'b' [E:/pipelined_riscv_processor/src_files/Processor_Top.v:97]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_Top_behav -key {Behavioral:sim_1:Functional:testbench_Top} -tclbatch {testbench_Top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source testbench_Top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 100000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_Top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 100000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1052.520 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_Top' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim/instructions.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_Top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/ALU_64_bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_64_bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/ALU_Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Control_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Data_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Imm_Data_Extractor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Imm_Data_Extractor
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Instruction_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instruction_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Instruction_Parser.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instruction_Parser
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Mux_2x1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux_2x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Processor_Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Processor_Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Program_Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Program_Counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Register_File_SC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register_File_SC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.srcs/sim_1/new/testbench_Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_Top
+WARNING: [VRFC 10-3248] data object 'sig_zero' is already declared [E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.srcs/sim_1/new/testbench_Top.v:54]
+WARNING: [VRFC 10-3703] second declaration of 'sig_zero' ignored [E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.srcs/sim_1/new/testbench_Top.v:54]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+"xelab -wto 73048c6165044e87be9673fa1eae8fe7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_Top_behav xil_defaultlib.testbench_Top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/program_files/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 73048c6165044e87be9673fa1eae8fe7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_Top_behav xil_defaultlib.testbench_Top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'b' [E:/pipelined_riscv_processor/src_files/Processor_Top.v:97]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Program_Counter
+Compiling module xil_defaultlib.Adder
+Compiling module xil_defaultlib.Mux_2x1
+Compiling module xil_defaultlib.Instruction_Memory
+Compiling module xil_defaultlib.Instruction_Parser
+Compiling module xil_defaultlib.Control_Unit
+Compiling module xil_defaultlib.Imm_Data_Extractor
+Compiling module xil_defaultlib.Register_File_SC
+Compiling module xil_defaultlib.ALU_Control
+Compiling module xil_defaultlib.ALU_64_bit
+Compiling module xil_defaultlib.Data_Memory
+Compiling module xil_defaultlib.Processor_Top
+Compiling module xil_defaultlib.testbench_Top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_Top_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_Top_behav -key {Behavioral:sim_1:Functional:testbench_Top} -tclbatch {testbench_Top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source testbench_Top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 100000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_Top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 100000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1052.520 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_Top' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim/instructions.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_Top_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+"xelab -wto 73048c6165044e87be9673fa1eae8fe7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_Top_behav xil_defaultlib.testbench_Top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/program_files/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 73048c6165044e87be9673fa1eae8fe7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_Top_behav xil_defaultlib.testbench_Top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'b' [E:/pipelined_riscv_processor/src_files/Processor_Top.v:97]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_Top_behav -key {Behavioral:sim_1:Functional:testbench_Top} -tclbatch {testbench_Top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source testbench_Top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 100000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_Top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 100000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1052.520 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_Top' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim/instructions.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_Top_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+"xelab -wto 73048c6165044e87be9673fa1eae8fe7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_Top_behav xil_defaultlib.testbench_Top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/program_files/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 73048c6165044e87be9673fa1eae8fe7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_Top_behav xil_defaultlib.testbench_Top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'b' [E:/pipelined_riscv_processor/src_files/Processor_Top.v:97]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_Top_behav -key {Behavioral:sim_1:Functional:testbench_Top} -tclbatch {testbench_Top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source testbench_Top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 100000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_Top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 100000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 1052.520 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_Top' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim/instructions.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_Top_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+"xelab -wto 73048c6165044e87be9673fa1eae8fe7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_Top_behav xil_defaultlib.testbench_Top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/program_files/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 73048c6165044e87be9673fa1eae8fe7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_Top_behav xil_defaultlib.testbench_Top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'b' [E:/pipelined_riscv_processor/src_files/Processor_Top.v:97]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_Top_behav -key {Behavioral:sim_1:Functional:testbench_Top} -tclbatch {testbench_Top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source testbench_Top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 100000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_Top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 100000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1052.520 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_Top' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim/instructions.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_Top_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+"xelab -wto 73048c6165044e87be9673fa1eae8fe7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_Top_behav xil_defaultlib.testbench_Top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/program_files/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 73048c6165044e87be9673fa1eae8fe7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_Top_behav xil_defaultlib.testbench_Top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'b' [E:/pipelined_riscv_processor/src_files/Processor_Top.v:97]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_Top_behav -key {Behavioral:sim_1:Functional:testbench_Top} -tclbatch {testbench_Top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source testbench_Top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 100000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_Top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 100000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 1052.520 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_Top' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim/instructions.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_Top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/ALU_64_bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_64_bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/ALU_Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Control_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Data_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Imm_Data_Extractor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Imm_Data_Extractor
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Instruction_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instruction_Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Instruction_Parser.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instruction_Parser
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Mux_2x1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux_2x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Processor_Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Processor_Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Program_Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Program_Counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/src_files/Register_File_SC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register_File_SC
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.srcs/sim_1/new/testbench_Top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_Top
+WARNING: [VRFC 10-3248] data object 'sig_zero' is already declared [E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.srcs/sim_1/new/testbench_Top.v:54]
+WARNING: [VRFC 10-3703] second declaration of 'sig_zero' ignored [E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.srcs/sim_1/new/testbench_Top.v:54]
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+"xelab -wto 73048c6165044e87be9673fa1eae8fe7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_Top_behav xil_defaultlib.testbench_Top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/program_files/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 73048c6165044e87be9673fa1eae8fe7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_Top_behav xil_defaultlib.testbench_Top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'b' [E:/pipelined_riscv_processor/src_files/Processor_Top.v:97]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Program_Counter
+Compiling module xil_defaultlib.Adder
+Compiling module xil_defaultlib.Mux_2x1
+Compiling module xil_defaultlib.Instruction_Memory
+Compiling module xil_defaultlib.Instruction_Parser
+Compiling module xil_defaultlib.Control_Unit
+Compiling module xil_defaultlib.Imm_Data_Extractor
+Compiling module xil_defaultlib.Register_File_SC
+Compiling module xil_defaultlib.ALU_Control
+Compiling module xil_defaultlib.ALU_64_bit
+Compiling module xil_defaultlib.Data_Memory
+Compiling module xil_defaultlib.Processor_Top
+Compiling module xil_defaultlib.testbench_Top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_Top_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1052.520 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/pipelined_riscv_processor/pipelined_processor/pipelined_processor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_Top_behav -key {Behavioral:sim_1:Functional:testbench_Top} -tclbatch {testbench_Top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source testbench_Top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 100000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_Top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 100000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 1052.520 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue May  2 20:31:57 2023...

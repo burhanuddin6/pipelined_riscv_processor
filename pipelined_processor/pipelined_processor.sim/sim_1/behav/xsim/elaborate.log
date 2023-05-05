@@ -6,27 +6,4 @@ Starting static elaboration
 Pass Through NonSizing Optimizer
 WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'b' [E:/pipelined_riscv_processor/src_files/Pipelined_Test.v:100]
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.Program_Counter
-Compiling module xil_defaultlib.Adder
-Compiling module xil_defaultlib.Mux_2x1
-Compiling module xil_defaultlib.Instruction_Memory
-Compiling module xil_defaultlib.IFID
-Compiling module xil_defaultlib.Instruction_Parser
-Compiling module xil_defaultlib.Control_Unit
-Compiling module xil_defaultlib.Register_File
-Compiling module xil_defaultlib.Imm_Data_Extractor
-Compiling module xil_defaultlib.IDEX_2
-Compiling module xil_defaultlib.Mux_3x1
-Compiling module xil_defaultlib.ALU_Control
-Compiling module xil_defaultlib.ALU_64_bit
-Compiling module xil_defaultlib.Forwarding_Unit
-Compiling module xil_defaultlib.EXMEM
-Compiling module xil_defaultlib.Data_Memory
-Compiling module xil_defaultlib.MEMWB
-Compiling module xil_defaultlib.Pipelined_Test
-Compiling module xil_defaultlib.testbench_Top
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot testbench_Top_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
